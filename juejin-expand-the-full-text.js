@@ -13,11 +13,11 @@
         // 半秒钟后执行
         setTimeout(function(){
             // 移除显示全文及半遮罩按钮
-            document.querySelector(".show-full,.show-full-block").remove();
+            document.querySelector(".show-full").remove();
+            document.querySelector(".show-full-block").remove();
             // 取消限制文章高度
             document.querySelector(".post-content-container").style.maxHeight = "100%";
         },500);
     }
-    // 判断是否支持document.attachEvent
-    document.attachEvent ? showContent() : document.addEventListener('DOMContentLoaded', showContent());
+    showContent();
 })();
